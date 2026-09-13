@@ -5,163 +5,794 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tax & Financial Library | Elevate Tax Services</title>
+  <title>eBook Library | Elevate Tax Services</title>
+
+  <meta name="description"
+        content="Affordable Canadian tax, bookkeeping and business eBooks from Elevate Tax Services.">
 
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    .store-hero {
+      background: #f4f8fa;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .store-hero h1 {
+      color: #183f5b;
+      font-size: 48px;
+      margin: 10px 0 15px;
+    }
+
+    .store-hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #5c6870;
+      font-size: 18px;
+    }
+
+    .store-price-message {
+      margin-top: 25px;
+      display: inline-block;
+      background: #183f5b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .ebook-card {
+      background: white;
+      border: 1px solid #e1e7ea;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: 0.25s;
+    }
+
+    .ebook-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(24,63,91,0.12);
+    }
+
+    .ebook-cover {
+      height: 250px;
+      background: #183f5b;
+      color: white;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .ebook-cover span {
+      color: #d6aa55;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .ebook-cover strong {
+      font-size: 25px;
+      line-height: 1.2;
+      margin-top: 12px;
+    }
+
+    .ebook-details {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .ebook-details h3 {
+      color: #183f5b;
+      margin-bottom: 10px;
+    }
+
+    .ebook-details p {
+      color: #64717a;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .ebook-price {
+      color: #183f5b;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 18px 0 12px;
+    }
+
+    .coming {
+      color: #a97822;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    @media(max-width:1000px) {
+
+      .ebook-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .ebook-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .store-hero h1 {
+        font-size: 38px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
 <header class="site-header">
+
   <div class="container nav-wrap">
 
     <a class="brand" href="index.html">
+
       <div class="brand-mark">E</div>
 
       <div>
         <strong>ELEVATE TAX SERVICES</strong>
         <span>Professional Canadian Tax Support</span>
       </div>
+
     </a>
 
+
     <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#services">Tax Services</a>
-      <a href="client-login.html">Client Login</a>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#services">
+        Tax Services
+      </a>
+
+      <a href="store.html">
+        eBooks
+      </a>
+
+      <a href="index.html#booking">
+        Book Tax Preparation
+      </a>
+
+      <a href="client-login.html">
+        Client Login
+      </a>
+
     </nav>
 
   </div>
+
 </header>
 
 
-<main class="section">
+
+<main>
+
+
+<section class="store-hero">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      ELEVATE DIGITAL LIBRARY
+    </span>
+
+    <h1>
+      Tax, Money & Business eBooks
+    </h1>
+
+    <p>
+
+      Easy-to-understand digital guides created to help
+      Canadians understand taxes, manage their money,
+      organize their businesses and make informed decisions.
+
+    </p>
+
+    <div class="store-price-message">
+      Practical eBooks starting at $5.99 CAD
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
 
   <div class="container">
 
     <div class="section-heading">
 
-      <span class="eyebrow">ELEVATE DIGITAL LIBRARY</span>
+      <span class="eyebrow">
+        TAX GUIDES
+      </span>
 
-      <h1>Tax & Financial eBooks</h1>
+      <h2>
+        Canadian Tax eBooks
+      </h2>
 
       <p>
-        Practical Canadian tax and business guides designed to make
-        complicated topics easier to understand.
+        Practical information you can keep and refer to throughout the year.
       </p>
 
     </div>
 
 
-    <div class="store-grid">
 
-      <article class="product-card">
+    <div class="ebook-grid">
 
-        <div class="cover">
-          2026<br>
-          TAX & BENEFITS GUIDE<br>
-          FOR CANADIANS
+
+      <!-- BOOK 1 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            ELEVATE TAX SERVICES
+          </span>
+
+          <strong>
+            2026<br>
+            TAX & BENEFITS<br>
+            GUIDE FOR CANADIANS
+          </strong>
+
         </div>
 
-        <h3>2026 Tax & Benefits Guide for Canadians</h3>
 
-        <p>
-          Canadian tax credits, benefits, deductions and practical
-          tax information.
-        </p>
+        <div class="ebook-details">
 
-        <strong>$19.99 CAD</strong>
+          <h3>
+            2026 Tax & Benefits Guide for Canadians
+          </h3>
 
-        <br><br>
+          <p>
 
-        <a class="btn primary small"
-           href="book-2026-tax-guide.html">
-          View Guide
-        </a>
+            Understand Canadian tax credits,
+            deductions, benefits, registered
+            savings plans and common tax situations.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <a
+            class="btn primary"
+            href="ebooks/book-2026-tax-guide.html"
+          >
+            View eBook
+          </a>
+
+        </div>
 
       </article>
 
 
-      <article class="product-card">
 
-        <div class="cover">
-          EXPATS TAX<br>
-          HANDBOOK<br>
-          FOR CANADIANS
+      <!-- BOOK 2 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            CANADIANS ABROAD
+          </span>
+
+          <strong>
+            EXPATS TAX<br>
+            HANDBOOK<br>
+            FOR CANADIANS
+          </strong>
+
         </div>
 
-        <h3>Expats Tax Handbook for Canadians</h3>
 
-        <p>
-          Tax information for Canadians living or working outside Canada.
-        </p>
+        <div class="ebook-details">
 
-        <strong>Coming Soon</strong>
+          <h3>
+            Expats Tax Handbook for Canadians
+          </h3>
+
+          <p>
+
+            A practical introduction to Canadian
+            tax considerations for Canadians
+            living or working abroad.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
 
       </article>
 
 
-      <article class="product-card">
 
-        <div class="cover">
-          SOLE PROPRIETOR<br>
-          OR<br>
-          LIMITED COMPANY?
+      <!-- BOOK 3 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            BUSINESS TAX GUIDE
+          </span>
+
+          <strong>
+            SOLE PROPRIETOR<br>
+            OR<br>
+            LIMITED COMPANY?
+          </strong>
+
         </div>
 
-        <h3>Sole Proprietor or Limited Company?</h3>
 
-        <p>
-          A practical guide to choosing a Canadian business structure.
-        </p>
+        <div class="ebook-details">
 
-        <strong>Coming Soon</strong>
+          <h3>
+            Sole Proprietor or Limited Company?
+          </h3>
+
+          <p>
+
+            Understand some of the important
+            differences when choosing how to
+            structure a Canadian business.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
 
       </article>
 
 
-      <article class="product-card">
 
-        <div class="cover">
-          KEEP YOUR BOOKS<br>
-          HAIR SALON
+      <!-- BOOK 4 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            BOOKKEEPING SERIES
+          </span>
+
+          <strong>
+            KEEP YOUR BOOKS<br>
+            HAIR SALON
+          </strong>
+
         </div>
 
-        <h3>Keep Your Books — Hair Salon</h3>
 
-        <p>
-          Bookkeeping guidance for salon owners and independent
-          beauty professionals.
-        </p>
+        <div class="ebook-details">
 
-        <strong>Coming Soon</strong>
+          <h3>
+            Keep Your Books — Hair Salon
+          </h3>
+
+          <p>
+
+            Practical bookkeeping guidance
+            for salon owners and independent
+            beauty professionals.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
 
       </article>
 
 
-      <article class="product-card">
 
-        <div class="cover">
-          TAXES<br>
-          FOR<br>
-          FARMERS
+      <!-- BOOK 5 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            FARM BUSINESS
+          </span>
+
+          <strong>
+            TAXES<br>
+            FOR<br>
+            FARMERS
+          </strong>
+
         </div>
 
-        <h3>Taxes for Farmers</h3>
 
-        <p>
-          Practical tax and recordkeeping information for Canadian
-          farming businesses.
-        </p>
+        <div class="ebook-details">
 
-        <strong>Coming Soon</strong>
+          <h3>
+            Taxes for Farmers
+          </h3>
+
+          <p>
+
+            A practical guide to tax and
+            recordkeeping considerations
+            for Canadian farming businesses.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
 
       </article>
+
+
+
+      <!-- BOOK 6 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            SELF-EMPLOYED
+          </span>
+
+          <strong>
+            CANADIAN<br>
+            SELF-EMPLOYMENT<br>
+            TAX GUIDE
+          </strong>
+
+        </div>
+
+
+        <div class="ebook-details">
+
+          <h3>
+            Self-Employment Tax Guide
+          </h3>
+
+          <p>
+
+            Learn about income, expenses,
+            recordkeeping and common Canadian
+            tax considerations for self-employed people.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- BOOK 7 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            RENTAL PROPERTY
+          </span>
+
+          <strong>
+            CANADIAN<br>
+            RENTAL INCOME<br>
+            TAX GUIDE
+          </strong>
+
+        </div>
+
+
+        <div class="ebook-details">
+
+          <h3>
+            Rental Property Tax Guide
+          </h3>
+
+          <p>
+
+            Understand rental income,
+            common expenses and important
+            Canadian tax considerations for landlords.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- BOOK 8 -->
+
+      <article class="ebook-card">
+
+        <div class="ebook-cover">
+
+          <span>
+            CRA HELP
+          </span>
+
+          <strong>
+            UNDERSTANDING<br>
+            CRA LETTERS<br>
+            & NOTICES
+          </strong>
+
+        </div>
+
+
+        <div class="ebook-details">
+
+          <h3>
+            Understanding CRA Letters & Notices
+          </h3>
+
+          <p>
+
+            Learn how to identify common CRA
+            correspondence and understand
+            practical next steps.
+
+          </p>
+
+          <div class="ebook-price">
+            $5.99 CAD
+          </div>
+
+          <div class="coming">
+            Coming Soon
+          </div>
+
+        </div>
+
+      </article>
+
 
     </div>
 
   </div>
 
+</section>
+
+
+
+<section class="section alt">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        MORE GUIDES COMING
+      </span>
+
+      <h2>
+        A growing digital library
+      </h2>
+
+      <p>
+
+        Elevate Tax Services will continue adding
+        practical eBooks covering Canadian taxes,
+        bookkeeping, business finances, CRA matters,
+        investing, retirement and other financial topics.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        NEED PROFESSIONAL TAX HELP?
+      </span>
+
+      <h2>
+        Need more than an eBook?
+      </h2>
+
+      <p>
+
+        Elevate Tax Services provides tax preparation
+        and support for individuals and businesses.
+
+      </p>
+
+      <br>
+
+      <a
+        class="btn primary"
+        href="index.html#booking"
+      >
+        Book Tax Preparation
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 </main>
+
+
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div>
+
+      <strong>
+        ELEVATE TAX SERVICES
+      </strong>
+
+      <p>
+        Canadian tax preparation,
+        education and practical tax guides.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        Tax Services
+      </strong>
+
+      <a href="index.html#services">
+        Personal Tax
+      </a>
+
+      <a href="index.html#business">
+        Business Tax
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        eBook Library
+      </strong>
+
+      <a href="store.html">
+        Browse eBooks
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        Contact
+      </strong>
+
+      <a href="tel:16047006282">
+        604-700-6282
+      </a>
+
+      <a href="mailto:Elevatetax@yahoo.com">
+        Elevatetax@yahoo.com
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="container legal">
+
+    <p>
+      © 2026 Elevate Tax Services.
+      All rights reserved.
+    </p>
+
+    <p>
+      Information provided in our digital guides
+      is general educational information.
+      Individual tax circumstances vary.
+    </p>
+
+  </div>
+
+</footer>
+
 
 </body>
 </html>
