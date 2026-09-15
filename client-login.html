@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Client Portal | Elevate Tax Services</title>
+
+  <meta name="description"
+        content="Secure client portal for Elevate Tax Services clients.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    .portal-page {
+      min-height: 75vh;
+      background: #f4f8fa;
+      padding: 80px 0;
+    }
+
+    .portal-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .portal-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .portal-heading h1 {
+      color: #183f5b;
+      font-size: 46px;
+      margin: 10px 0 15px;
+    }
+
+    .portal-heading p {
+      color: #5c6870;
+      font-size: 18px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .portal-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 45px;
+      box-shadow: 0 15px 40px rgba(24,63,91,0.10);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .portal-box {
+      padding: 10px;
+    }
+
+    .portal-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .portal-box h2 {
+      color: #183f5b;
+      margin-bottom: 12px;
+    }
+
+    .portal-box p {
+      color: #64717a;
+      margin-bottom: 20px;
+    }
+
+    .secure-list {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .secure-list li {
+      margin: 10px 0;
+      color: #53636d;
+    }
+
+    .secure-list li::before {
+      content: "✓";
+      color: #b78429;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .portal-notice {
+      margin-top: 35px;
+      background: #183f5b;
+      color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .portal-notice strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .portal-notice p {
+      color: #dbe5ea;
+      margin: 0;
+    }
+
+    @media(max-width:700px) {
+
+      .portal-card {
+        grid-template-columns: 1fr;
+        padding: 30px;
+      }
+
+      .portal-heading h1 {
+        font-size: 38px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html">
+
+      <div class="brand-mark">E</div>
+
+      <div>
+        <strong>ELEVATE TAX SERVICES</strong>
+        <span>Professional Canadian Tax Support</span>
+      </div>
+
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#services">
+        Tax Services
+      </a>
+
+      <a href="store.html">
+        eBooks
+      </a>
+
+      <a href="index.html#booking">
+        Book Tax Preparation
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main class="portal-page">
+
+  <div class="container portal-container">
+
+
+    <div class="portal-heading">
+
+      <span class="eyebrow">
+        ELEVATE TAX SERVICES
+      </span>
+
+      <h1>
+        Secure Client Portal
+      </h1>
+
+      <p>
+        A private area for Elevate Tax Services clients
+        to manage their tax preparation securely.
+      </p>
+
+    </div>
+
+
+
+    <div class="portal-card">
+
+
+      <div class="portal-box">
+
+        <div class="portal-icon">
+          🔐
+        </div>
+
+        <h2>
+          Existing Clients
+        </h2>
+
+        <p>
+          Once our secure client portal is connected,
+          existing clients will be able to access their
+          private account here.
+        </p>
+
+        <button
+          class="btn primary"
+          onclick="alert('The secure client portal will be connected here next.')"
+        >
+          Client Login
+        </button>
+
+      </div>
+
+
+
+      <div class="portal-box">
+
+        <div class="portal-icon">
+          📄
+        </div>
+
+        <h2>
+          Start Your Tax Return
+        </h2>
+
+        <p>
+          New clients will be able to begin their
+          tax preparation process through a secure
+          intake system.
+        </p>
+
+        <a
+          class="btn secondary"
+          href="index.html#booking"
+        >
+          Start Tax Preparation
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="portal-notice">
+
+      <strong>
+        🔒 Your privacy matters.
+      </strong>
+
+      <p>
+        Sensitive tax information and documents
+        should only be submitted through our secure
+        client portal once it is activated.
+      </p>
+
+    </div>
+
+
+
+    <div style="margin-top:45px;">
+
+      <h2 style="color:#183f5b;">
+        What will you be able to do here?
+      </h2>
+
+      <ul class="secure-list">
+
+        <li>
+          Complete your tax intake information
+        </li>
+
+        <li>
+          Upload tax documents securely
+        </li>
+
+        <li>
+          Communicate regarding your tax return
+        </li>
+
+        <li>
+          Access important tax information
+        </li>
+
+        <li>
+          Follow the progress of your tax preparation
+        </li>
+
+      </ul>
+
+    </div>
+
+
+  </div>
+
+</main>
+
+
+
+<footer>
+
+  <div class="container footer-grid">
+
+
+    <div>
+
+      <strong>
+        ELEVATE TAX SERVICES
+      </strong>
+
+      <p>
+        Canadian tax preparation,
+        education and practical tax guides.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        Tax Services
+      </strong>
+
+      <a href="index.html#services">
+        Personal Tax
+      </a>
+
+      <a href="index.html#business">
+        Business Tax
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        eBook Library
+      </strong>
+
+      <a href="store.html">
+        Browse eBooks
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        Contact
+      </strong>
+
+      <a href="tel:16047006282">
+        604-700-6282
+      </a>
+
+      <a href="mailto:Elevatetax@yahoo.com">
+        Elevatetax@yahoo.com
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="container legal">
+
+    <p>
+      © 2026 Elevate Tax Services.
+      All rights reserved.
+    </p>
+
+    <p>
+      Please do not send sensitive personal or tax
+      information through regular email.
+    </p>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
