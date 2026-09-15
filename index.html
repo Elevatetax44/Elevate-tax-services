@@ -1,449 +1,1167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elevate Tax Services | Canadian Tax Help & Tax Guides</title>
-  <meta name="description" content="Elevate Tax Services offers personal and business tax preparation, tax resources, and practical Canadian tax eBooks." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Elevate Tax Services | Professional Canadian Tax Support</title>
+
+  <meta name="description"
+        content="Professional Canadian personal and business tax preparation, GST/HST, payroll, CRA support and tax education.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    :root {
+      --navy: #062f55;
+      --deep-navy: #032846;
+      --blue: #174e7c;
+      --light-blue: #eef8ff;
+      --gold: #c58b19;
+      --gold-dark: #a9710d;
+      --white: #ffffff;
+      --text: #17334f;
+      --muted: #5d6c78;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .lux-container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    .lux-header {
+      background: white;
+      border-bottom: 1px solid #e7edf1;
+    }
+
+    .top-header {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .lux-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--navy);
+    }
+
+    .logo-symbol {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      position: relative;
+      background:
+        conic-gradient(
+          #27a4f3 0deg 120deg,
+          #194d9c 120deg 220deg,
+          #d6e3ea 220deg 300deg,
+          #124e56 300deg 360deg
+        );
+    }
+
+    .logo-symbol::after {
+      content: "";
+      width: 31px;
+      height: 31px;
+      background: #151515;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .brand-name strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .brand-name span {
+      display: block;
+      margin-top: 9px;
+      letter-spacing: 3px;
+      font-size: 11px;
+      color: #73818e;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    .header-contact a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .gold-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #d39b29, #b87908);
+      color: white !important;
+      padding: 14px 22px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(174,118,11,.20);
+    }
+
+    .nav-bar {
+      border-top: 1px solid #f0f2f4;
+    }
+
+    .nav-inner {
+      min-height: 55px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .nav-inner a {
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .nav-inner a:hover {
+      color: var(--gold);
+    }
+
+    /* HERO */
+
+    .hero-luxury {
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,1) 0%,
+          rgba(255,255,255,.97) 38%,
+          rgba(240,248,253,.80) 58%,
+          rgba(183,220,244,.55) 100%
+        );
+    }
+
+    .hero-luxury::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -100px;
+      width: 58%;
+      height: 530px;
+      background:
+        linear-gradient(to top, rgba(11,67,103,.20), transparent),
+        linear-gradient(135deg, transparent 30%, rgba(27,114,170,.08));
+      border-radius: 55% 0 0 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 78px 0 75px;
+      max-width: 670px;
+    }
+
+    .eyebrow-gold {
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: clamp(48px, 6vw, 72px);
+      line-height: .99;
+      font-weight: 500;
+      margin: 18px 0;
+    }
+
+    .hero-subtitle {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      color: #26394c;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #536370;
+    }
+
+    .hero-actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .outline-button {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--navy);
+      border-radius: 5px;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      background: white;
+    }
+
+    .financial-message {
+      position: absolute;
+      z-index: 3;
+      right: 8%;
+      top: 95px;
+      width: 300px;
+      text-align: center;
+      color: var(--navy);
+    }
+
+    .financial-message strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .financial-message span {
+      display: block;
+      margin-top: 22px;
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    /* SERVICES */
+
+    .service-strip {
+      background: linear-gradient(180deg, #f5fbff, #e8f5fd);
+      border-top: 1px solid #dcebf4;
+      border-bottom: 1px solid #dcebf4;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .service-item {
+      text-align: center;
+      padding: 34px 18px;
+      border-right: 1px solid #ccdee9;
+    }
+
+    .service-item:last-child {
+      border-right: 0;
+    }
+
+    .service-icon {
+      font-size: 35px;
+      color: var(--navy);
+      margin-bottom: 13px;
+    }
+
+    .service-item h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    /* WHY CHOOSE */
+
+    .why-section {
+      padding: 65px 0;
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .why-section h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 40px;
+      line-height: 1.1;
+      font-weight: 500;
+      margin: 12px 0 0;
+    }
+
+    .gold-line {
+      width: 55px;
+      height: 3px;
+      background: var(--gold);
+      margin-top: 24px;
+    }
+
+    .benefit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .benefit-list li {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin: 14px 0;
+      font-size: 16px;
+      color: var(--navy);
+    }
+
+    .benefit-list li::before {
+      content: "✓";
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* EBOOK */
+
+    .ebook-feature {
+      background:
+        linear-gradient(115deg, #e5f5ff, #f8fcff 48%, #dbefff);
+      padding: 58px 0;
+      overflow: hidden;
+    }
+
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: 270px 1fr 300px;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .book-mockup {
+      min-height: 340px;
+      background:
+        linear-gradient(180deg, #dff3ff, #ffffff);
+      border: 1px solid #bfd6e4;
+      box-shadow: 15px 16px 28px rgba(15,63,94,.18);
+      padding: 30px 24px;
+      text-align: center;
+      color: var(--navy);
+    }
+
+    .mini-logo {
+      margin: 0 auto 16px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background:
+        conic-gradient(
+          #27a4f3 0deg 120deg,
+          #194d9c 120deg 220deg,
+          #d6e3ea 220deg 300deg,
+          #124e56 300deg
+        );
+      position: relative;
+    }
+
+    .mini-logo::after {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background: #151515;
+      border-radius: 50%;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    .book-mockup small {
+      display: block;
+      font-family: Georgia, serif;
+    }
+
+    .book-mockup strong {
+      display: block;
+      margin-top: 20px;
+      font-size: 33px;
+      line-height: 1.03;
+    }
+
+    .book-mockup span {
+      display: block;
+      margin-top: 16px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .ebook-copy h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: 1.06;
+      margin: 12px 0;
+      font-weight: 500;
+    }
+
+    .ebook-copy p {
+      color: #536370;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .ebook-quote {
+      border-left: 2px solid var(--gold);
+      padding-left: 34px;
+      font-family: Georgia, serif;
+      font-style: italic;
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1.4;
+    }
+
+    /* ACTION ROW */
+
+    .action-row {
+      background: white;
+      border-top: 1px solid #e2e8ec;
+      border-bottom: 1px solid #e2e8ec;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .action-card {
+      padding: 30px 35px;
+      border-right: 1px solid #e0e4e7;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .action-card:last-child {
+      border-right: 0;
+    }
+
+    .action-circle {
+      width: 58px;
+      height: 58px;
+      flex: 0 0 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #faf6ed;
+      color: var(--gold-dark);
+      font-size: 27px;
+    }
+
+    .action-card h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 20px;
+    }
+
+    .action-card a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    .lux-footer {
+      background: linear-gradient(135deg, #022b4b, #04365e);
+      color: white;
+      padding: 48px 0 22px;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1.3fr 1fr;
+      gap: 45px;
+    }
+
+    .footer-logo {
+      text-align: center;
+    }
+
+    .footer-logo .logo-symbol {
+      margin: auto;
+    }
+
+    .footer-logo strong {
+      display: block;
+      font-family: Georgia, serif;
+      font-style: italic;
+      font-size: 25px;
+      margin-top: 12px;
+    }
+
+    .lux-footer h4 {
+      margin: 0 0 15px;
+      font-size: 15px;
+    }
+
+    .lux-footer a,
+    .lux-footer p {
+      color: #e8f0f5;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .footer-links a {
+      display: block;
+    }
+
+    .footer-tagline {
+      font-family: Georgia, serif;
+      font-style: italic;
+      color: #d8a646;
+      font-size: 25px;
+      line-height: 1.35;
+    }
+
+    .footer-bottom {
+      margin-top: 35px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.25);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .footer-bottom span:last-child {
+      color: #f0c15e;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 950px) {
+
+      .header-contact {
+        display: none;
+      }
+
+      .nav-inner {
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+        padding: 14px 0;
+      }
+
+      .financial-message {
+        display: none;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-item {
+        border-bottom: 1px solid #ccdee9;
+      }
+
+      .why-grid,
+      .ebook-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .book-mockup {
+        max-width: 280px;
+        margin: auto;
+      }
+
+      .ebook-quote {
+        display: none;
+      }
+
+      .action-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .action-card {
+        border-right: 0;
+        border-bottom: 1px solid #e0e4e7;
+      }
+
+      .footer-columns {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media(max-width: 600px) {
+
+      .top-header {
+        justify-content: center;
+      }
+
+      .logo-symbol {
+        width: 55px;
+        height: 55px;
+      }
+
+      .logo-symbol::after {
+        width: 24px;
+        height: 24px;
+        top: 15px;
+        left: 15px;
+      }
+
+      .brand-name strong {
+        font-size: 24px;
+      }
+
+      .brand-name span {
+        letter-spacing: 1.5px;
+        font-size: 9px;
+      }
+
+      .hero-content {
+        padding: 55px 0;
+      }
+
+      .hero-content h1 {
+        font-size: 47px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-item {
+        border-right: 0;
+      }
+
+      .why-section h2,
+      .ebook-copy h2 {
+        font-size: 34px;
+      }
+
+      .footer-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="#home">
-      <div class="brand-mark">E</div>
-      <div>
-        <strong>ELEVATE TAX SERVICES</strong>
-        <span>Professional Canadian Tax Support</span>
+
+<!-- HEADER -->
+
+<header class="lux-header">
+
+  <div class="lux-container top-header">
+
+    <a class="lux-brand" href="index.html">
+
+      <div class="logo-symbol"></div>
+
+      <div class="brand-name">
+        <strong>Elevate Tax Services</strong>
+        <span>PROFESSIONAL CANADIAN TAX SUPPORT</span>
       </div>
+
     </a>
 
-    <button class="menu-toggle" aria-label="Open menu"
-      onclick="document.body.classList.toggle('menu-open')">☰</button>
 
-    <nav>
-      <a href="#services">Tax Services</a>
-      <a href="#business">Business Tax</a>
-      <a href="#books">eBooks</a>
-      <a href="#resources">Resources</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-login" href="client-login.html">Client Login</a>
-    </nav>
+    <div class="header-contact">
+
+      <a href="tel:16047006282">
+        ☎ &nbsp;604-700-6282
+      </a>
+
+      <a href="mailto:Elevatetax@yahoo.com">
+        ✉ &nbsp;Elevatetax@yahoo.com
+      </a>
+
+      <a class="gold-button" href="#booking">
+        Book an Appointment
+      </a>
+
+    </div>
+
   </div>
+
+
+  <div class="nav-bar">
+
+    <nav class="lux-container nav-inner">
+
+      <a href="index.html">Home</a>
+
+      <a href="#services">Tax Services</a>
+
+      <a href="store.html">eBooks</a>
+
+      <a href="client-login.html">Client Portal</a>
+
+      <a href="#about">About</a>
+
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+  </div>
+
 </header>
 
-<main id="home">
 
-<section class="hero">
-  <div class="container hero-grid">
 
-    <div>
-      <span class="eyebrow">CANADIAN TAX HELP FOR INDIVIDUALS & BUSINESSES</span>
+<!-- HERO -->
+
+<section class="hero-luxury">
+
+  <div class="lux-container">
+
+    <div class="hero-content">
+
+      <span class="eyebrow-gold">
+        TRUST. KNOWLEDGE. RESULTS.
+      </span>
 
       <h1>
-        Understand your taxes.<br>
-        <span>Know your benefits.</span><br>
-        Move forward with confidence.
+        Canadian Tax Support<br>
+        You Can Trust
       </h1>
 
+      <div class="hero-subtitle">
+        Personal. Business. Practical. Professional.
+      </div>
+
       <p class="hero-copy">
-        Personal tax preparation, business and corporate tax support,
-        CRA assistance, tax education, and practical digital guides —
-        all in one place.
+        We help individuals, families and businesses navigate
+        Canadian taxes with confidence.
       </p>
 
       <div class="hero-actions">
-        <a class="btn primary" href="#booking">Book Tax Preparation</a>
-        <a class="btn secondary" href="#books">Shop Tax Guides</a>
+
+        <a class="gold-button" href="#booking">
+          Book Your Tax Preparation →
+        </a>
+
+        <a class="outline-button" href="#services">
+          Our Services
+        </a>
+
       </div>
 
-      <div class="trust-row">
-        <span>✓ Personal Tax</span>
-        <span>✓ Business & Corporate</span>
-        <span>✓ CRA Support</span>
-        <span>✓ Digital Tax Guides</span>
-      </div>
     </div>
 
-    <div class="hero-card">
-      <p class="small-title">START HERE</p>
-      <h2>What do you need help with?</h2>
 
-      <a href="#services" class="choice-card">
-        <span>01</span>
-        <div>
-          <strong>Personal Tax Return</strong>
-          <small>Individuals, families, seniors, newcomers</small>
-        </div>→
-      </a>
+    <div class="financial-message">
 
-      <a href="#business" class="choice-card">
-        <span>02</span>
-        <div>
-          <strong>Business Tax</strong>
-          <small>Self-employed, GST/HST, payroll, corporate</small>
-        </div>→
-      </a>
+      <strong>
+        Your Financial Future Matters
+      </strong>
 
-      <a href="#booking" class="choice-card">
-        <span>03</span>
-        <div>
-          <strong>Start My Tax Return</strong>
-          <small>Book now and complete your intake securely</small>
-        </div>→
-      </a>
+      <span>
+        PLAN TODAY FOR A BRIGHTER TOMORROW
+      </span>
 
-      <a href="#books" class="choice-card">
-        <span>04</span>
-        <div>
-          <strong>Tax & Financial Library</strong>
-          <small>eBooks and practical guides</small>
-        </div>→
-      </a>
     </div>
 
   </div>
+
 </section>
 
-<section class="section" id="services">
-  <div class="container">
 
-    <div class="section-heading">
-      <span class="eyebrow">TAX SERVICES</span>
-      <h2>Tax help built around real life</h2>
-      <p>Clear, practical support for everyday Canadian tax situations.</p>
-    </div>
 
-    <div class="cards three">
+<!-- SERVICES -->
 
-      <article class="service-card">
-        <div class="icon">👤</div>
-        <h3>Personal Tax Returns</h3>
-        <p>
-          T1 preparation for individuals, families, seniors, students,
-          newcomers, rental income, investments and more.
-        </p>
-        <a href="#booking">Book personal tax →</a>
-      </article>
+<section class="service-strip" id="services">
 
-      <article class="service-card">
-        <div class="icon">🏢</div>
-        <h3>Business & Corporate Tax</h3>
-        <p>
-          Support for self-employed Canadians, corporations,
-          GST/HST, PST, payroll and year-end tax preparation.
-        </p>
-        <a href="#business">Explore business tax →</a>
-      </article>
+  <div class="lux-container service-grid">
 
-      <article class="service-card">
-        <div class="icon">📄</div>
-        <h3>CRA & Tax Problems</h3>
-        <p>
-          Late returns, CRA letters, past-return corrections,
-          payment arrangement guidance and getting records organized.
-        </p>
-        <a href="#contact">Ask for help →</a>
-      </article>
+
+    <div class="service-item">
+
+      <div class="service-icon">♙</div>
+
+      <h3>
+        Personal<br>Tax Returns
+      </h3>
 
     </div>
+
+
+    <div class="service-item">
+
+      <div class="service-icon">▥</div>
+
+      <h3>
+        Business<br>Tax (T2)
+      </h3>
+
+    </div>
+
+
+    <div class="service-item">
+
+      <div class="service-icon">▤</div>
+
+      <h3>
+        GST/HST<br>& PST
+      </h3>
+
+    </div>
+
+
+    <div class="service-item">
+
+      <div class="service-icon">♧</div>
+
+      <h3>
+        Payroll<br>Services
+      </h3>
+
+    </div>
+
+
+    <div class="service-item">
+
+      <div class="service-icon">▢</div>
+
+      <h3>
+        Tax Education<br>& eBooks
+      </h3>
+
+    </div>
+
+
   </div>
+
 </section>
 
-<section class="section alt" id="business">
-  <div class="container split">
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-section" id="about">
+
+  <div class="lux-container why-grid">
+
 
     <div>
-      <span class="eyebrow">BUSINESS TAX</span>
-      <h2>For self-employed Canadians and growing businesses</h2>
 
-      <p>
-        Elevate Tax Services can help you stay organized and understand
-        the tax side of running your business.
-      </p>
+      <span class="eyebrow-gold">
+        WHY CHOOSE ELEVATE TAX SERVICES
+      </span>
 
-      <ul class="checklist">
-        <li>Self-employed tax returns</li>
-        <li>T2 corporate income tax returns</li>
-        <li>GST/HST and PST support</li>
-        <li>Payroll guidance</li>
-        <li>Bookkeeping review and cleanup</li>
-        <li>Year-end organization</li>
+      <h2>
+        More Than Tax Filing<br>
+        A Partner in Your Financial Journey
+      </h2>
+
+      <div class="gold-line"></div>
+
+    </div>
+
+
+    <div>
+
+      <ul class="benefit-list">
+
+        <li>Professional & Reliable</li>
+
+        <li>Clear and Honest Communication</li>
+
+        <li>Personalized Support</li>
+
+        <li>Year-Round Guidance</li>
+
+        <li>Serving Clients Across Canada</li>
+
       </ul>
 
-      <a class="btn primary" href="#booking">Book Business Tax Help</a>
     </div>
 
-    <div class="info-panel">
-      <span class="badge">BUSINESS OWNERS</span>
-      <h3>Don't wait until filing season to organize your books.</h3>
-      <p>
-        Good records make tax preparation easier and can help you
-        understand where your business actually stands.
-      </p>
-      <a href="#resources">Visit Tax Resources →</a>
-    </div>
 
   </div>
+
 </section>
 
-<section class="section" id="books">
-  <div class="container">
 
-    <div class="section-heading inline">
+
+<!-- FEATURED EBOOK -->
+
+<section class="ebook-feature">
+
+  <div class="lux-container ebook-grid">
+
+
+    <div class="book-mockup">
+
+      <div class="mini-logo"></div>
+
+      <small>ELEVATE TAX SERVICES</small>
+
+      <strong>
+        2026<br>
+        TAX & BENEFITS<br>
+        GUIDE
+      </strong>
+
+      <span>
+        FOR CANADIANS
+      </span>
+
+    </div>
+
+
+    <div class="ebook-copy">
+
+      <span class="eyebrow-gold">
+        FEATURED EBOOK
+      </span>
+
+      <h2>
+        2026 Tax & Benefits<br>
+        Guide for Canadians
+      </h2>
+
+      <p>
+        Your easy-to-understand guide to Canadian taxes,
+        credits and benefits for 2026.
+      </p>
+
+      <br>
+
+      <a
+        class="gold-button"
+        href="ebooks/book-2026-tax-guide.html"
+      >
+        Get Your Copy — $5.99 →
+      </a>
+
+    </div>
+
+
+    <div class="ebook-quote">
+
+      “Knowledge puts you in control
+      of your financial future.”
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ACTIONS -->
+
+<section class="action-row" id="booking">
+
+  <div class="lux-container action-grid">
+
+
+    <div class="action-card">
+
+      <div class="action-circle">
+        ◫
+      </div>
+
       <div>
-        <span class="eyebrow">TAX & FINANCIAL LIBRARY</span>
-        <h2>Practical guides you can use</h2>
+
+        <h3>
+          Book a Tax Appointment
+        </h3>
+
+        <a href="mailto:Elevatetax@yahoo.com?subject=Tax%20Appointment%20Request">
+          Book Now →
+        </a>
+
       </div>
 
-      <a href="store.html" class="text-link">View all eBooks →</a>
     </div>
 
-    <div class="book-grid">
 
-      <article class="book-card featured">
+    <div class="action-card">
 
-        <div class="book-cover">
-          <small>ELEVATE TAX SERVICES</small>
-          <strong>2026</strong>
-          <h3>TAX & BENEFITS GUIDE</h3>
-          <p>FOR CANADIANS</p>
-          <span>
-            Know what you can claim.<br>
-            Know your benefits.<br>
-            Know your tax rights.
-          </span>
-        </div>
-
-        <div class="book-info">
-          <span class="badge">FEATURED GUIDE</span>
-
-          <h3>2026 Tax & Benefits Guide for Canadians</h3>
-
-          <p>
-            A practical guide to Canadian tax credits, benefits,
-            deductions, savings plans, common tax situations and more.
-          </p>
-
-          <div class="price-row">
-            <strong>$19.99 CAD</strong>
-            <a class="btn primary small"
-               href="book-2026-tax-guide.html">View Guide</a>
-          </div>
-        </div>
-
-      </article>
-
-      <article class="mini-book">
-        <div class="mini-cover">
-          EXPAT<br><strong>TAX</strong><br>GUIDE
-        </div>
-
-        <h3>Expats Tax Handbook for Canadians</h3>
-
-        <p>
-          Canadian tax considerations for Canadians living or working abroad.
-        </p>
-
-        <a href="store.html">Coming to the library →</a>
-      </article>
-
-      <article class="mini-book">
-        <div class="mini-cover">
-          SOLE<br><strong>PROPRIETOR</strong><br>OR LTD?
-        </div>
-
-        <h3>Sole Proprietor or Limited Company?</h3>
-
-        <p>
-          A practical guide for business owners choosing a business structure.
-        </p>
-
-        <a href="store.html">Coming to the library →</a>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="booking">
-  <div class="container booking-grid">
-
-    <div>
-      <span class="eyebrow">BOOK TAX PREPARATION</span>
-
-      <h2>Ready to start your tax return?</h2>
-
-      <p>
-        Choose the service you need. The booking and secure intake
-        system will be connected here.
-      </p>
-
-      <div class="booking-buttons">
-        <button class="btn primary"
-          onclick="alert('Booking system connection will be added next.')">
-          Book Personal Tax
-        </button>
-
-        <button class="btn secondary"
-          onclick="alert('Booking system connection will be added next.')">
-          Book Business Tax
-        </button>
+      <div class="action-circle">
+        🔒
       </div>
+
+      <div>
+
+        <h3>
+          Client Portal
+        </h3>
+
+        <a href="client-login.html">
+          Client Login →
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="secure-box">
-      <div class="lock">🔒</div>
 
-      <h3>Secure Client Area</h3>
+    <div class="action-card">
 
-      <p>
-        Client login, tax intake forms and document uploads will be
-        connected to a secure system — not stored on the public website.
-      </p>
+      <div class="action-circle">
+        ☎
+      </div>
 
-      <a class="btn dark" href="client-login.html">Client Login</a>
+      <div>
+
+        <h3>
+          Need Help?
+        </h3>
+
+        <a href="tel:16047006282">
+          604-700-6282
+        </a>
+
+      </div>
+
     </div>
+
 
   </div>
+
 </section>
 
-<section class="section" id="resources">
-  <div class="container">
 
-    <div class="section-heading">
-      <span class="eyebrow">FREE TAX RESOURCES</span>
-      <h2>Learn before you file</h2>
+
+<!-- FOOTER -->
+
+<footer class="lux-footer" id="contact">
+
+  <div class="lux-container footer-columns">
+
+
+    <div class="footer-logo">
+
+      <div class="logo-symbol"></div>
+
+      <strong>
+        ELEVATE TAX
+      </strong>
+
+    </div>
+
+
+    <div>
+
+      <h4>Quick Links</h4>
+
+      <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="#services">Tax Services</a>
+
+        <a href="store.html">eBooks</a>
+
+        <a href="client-login.html">Client Portal</a>
+
+        <a href="#about">About</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h4>Contact</h4>
+
+      <p>☎ &nbsp;604-700-6282</p>
+
+      <p>✉ &nbsp;Elevatetax@yahoo.com</p>
 
       <p>
-        Educational articles can help visitors understand common
-        Canadian tax topics — and bring new clients to Elevate.
+        Serving clients across Canada
       </p>
-    </div>
-
-    <div class="cards three">
-
-      <article class="resource-card">
-        <span>NEWCOMERS</span>
-        <h3>New to Canada? Know Your Tax Rights</h3>
-        <p>
-          Understand tax residency, benefits and common newcomer tax questions.
-        </p>
-        <a href="#">Read article →</a>
-      </article>
-
-      <article class="resource-card">
-        <span>CRA</span>
-        <h3>Received a CRA Letter?</h3>
-        <p>
-          What to do when you receive a notice, reassessment
-          or request for information.
-        </p>
-        <a href="#">Read article →</a>
-      </article>
-
-      <article class="resource-card">
-        <span>SMALL BUSINESS</span>
-        <h3>Tax Records Every Business Should Keep</h3>
-        <p>
-          A simple overview of records that make tax preparation easier.
-        </p>
-        <a href="#">Read article →</a>
-      </article>
 
     </div>
-  </div>
-</section>
 
-<section class="section about" id="about">
-  <div class="container split">
 
     <div>
-      <span class="eyebrow">ABOUT ELEVATE</span>
-      <h2>Tax information should be understandable.</h2>
 
-      <p>
-        Elevate Tax Services helps individuals and businesses understand
-        their tax obligations, organize their records and make informed decisions.
-      </p>
+      <div class="footer-tagline">
+        Building Brighter<br>
+        Tomorrows Together
+      </div>
+
     </div>
 
-    <div class="quote-panel">
-      <p>
-        “Taxes aren't only about what you owe. They're also about
-        understanding what you're entitled to.”
-      </p>
-      <strong>Elevate Tax Services</strong>
-    </div>
-
-  </div>
-</section>
-
-<section class="section contact" id="contact">
-  <div class="container contact-grid">
-
-    <div>
-      <span class="eyebrow">CONTACT</span>
-      <h2>Have a tax question?</h2>
-
-      <p>
-        Contact Elevate Tax Services or book your tax preparation online.
-      </p>
-    </div>
-
-    <div class="contact-details">
-      <a href="tel:16047006282">📞 604-700-6282</a>
-      <a href="mailto:Elevatetax@yahoo.com">✉ Elevatetax@yahoo.com</a>
-      <a class="btn primary" href="#booking">Book Tax Preparation</a>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container footer-grid">
-
-    <div>
-      <strong>ELEVATE TAX SERVICES</strong>
-      <p>
-        Canadian tax preparation, education and practical tax guides.
-      </p>
-    </div>
-
-    <div>
-      <strong>Services</strong>
-      <a href="#services">Personal Tax</a>
-      <a href="#business">Business Tax</a>
-      <a href="#booking">Book Preparation</a>
-    </div>
-
-    <div>
-      <strong>Library</strong>
-      <a href="#books">Tax Guides & eBooks</a>
-      <a href="#resources">Free Tax Resources</a>
-    </div>
-
-    <div>
-      <strong>Clients</strong>
-      <a href="client-login.html">Client Login</a>
-      <a href="#contact">Contact</a>
-    </div>
 
   </div>
 
-  <div class="container legal">
-    <p>© 2026 Elevate Tax Services. All rights reserved.</p>
 
-    <p>
-      Information on this website is general educational information
-      and is not a substitute for tax advice based on your individual circumstances.
-    </p>
+  <div class="lux-container footer-bottom">
+
+    <span>
+      © 2026 Elevate Tax Services. All rights reserved.
+    </span>
+
+    <span>
+      Professional. Reliable. Canadian.
+    </span>
+
   </div>
+
 </footer>
+
 
 </body>
 </html>
