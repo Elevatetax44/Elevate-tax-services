@@ -1405,3 +1405,702 @@ img {
   }
 
 }
+/* =========================================================
+   FINAL HERO / HEADER OVERRIDE
+   Matches approved Elevate Tax homepage reference
+   ========================================================= */
+
+
+/* ---------- HERO BACKGROUND ---------- */
+
+.hero {
+  position: relative !important;
+
+  width: 100% !important;
+  height: 520px !important;
+  min-height: 520px !important;
+
+  overflow: hidden !important;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,.98) 15%,
+      rgba(255,255,255,.92) 25%,
+      rgba(255,255,255,.70) 34%,
+      rgba(255,255,255,.30) 43%,
+      rgba(255,255,255,.08) 51%,
+      rgba(255,255,255,0) 60%
+    ),
+    url("./toronto-skyline.jpg") !important;
+
+  background-repeat: no-repeat !important;
+
+  background-size:
+    cover,
+    cover !important;
+
+  background-position:
+    center,
+    center 54% !important;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+  position: relative !important;
+
+  z-index: 30 !important;
+
+  width: 100% !important;
+
+  background: transparent !important;
+}
+
+
+.header-container {
+  width: min(1180px, 90%) !important;
+
+  height: 125px !important;
+
+  margin: 0 auto !important;
+
+  padding: 10px 0 0 !important;
+
+  display: flex !important;
+
+  align-items: flex-start !important;
+
+  flex-wrap: nowrap !important;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.logo {
+  display: block !important;
+
+  width: 150px !important;
+
+  flex:
+    0 0 150px !important;
+}
+
+
+.logo img {
+  display: block !important;
+
+  width: 145px !important;
+
+  height: auto !important;
+
+  max-width: none !important;
+}
+
+
+/* ---------- TOP NAVIGATION ---------- */
+
+.main-nav {
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 42px !important;
+
+  margin:
+    0
+    0
+    0
+    72px !important;
+
+  padding-top: 31px !important;
+
+  width: auto !important;
+}
+
+
+.main-nav a {
+  position: relative !important;
+
+  padding:
+    0
+    0
+    10px !important;
+
+  color: #061d4b !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size: 15px !important;
+
+  line-height: 1 !important;
+
+  white-space: nowrap !important;
+}
+
+
+.main-nav a::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  left: 50% !important;
+
+  bottom: 0 !important;
+
+  width: 0 !important;
+
+  height: 2px !important;
+
+  background: #ae7118 !important;
+
+  transform:
+    translateX(-50%) !important;
+}
+
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+  width: 48px !important;
+}
+
+
+/* ---------- TOP CONSULTATION BUTTON ---------- */
+
+.top-consultation-btn {
+  margin:
+    13px
+    0
+    0
+    auto !important;
+
+  width: auto !important;
+
+  min-width: 225px !important;
+
+  height: 48px !important;
+
+  padding:
+    0
+    20px !important;
+
+  flex-shrink: 0 !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 11px !important;
+
+  color: #ffffff !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #9a6115,
+      #ca9135,
+      #a76a17
+    ) !important;
+
+  border-radius: 8px !important;
+
+  font-size: 12px !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: .7px !important;
+
+  white-space: nowrap !important;
+
+  box-shadow:
+    0 5px 15px
+    rgba(72,43,7,.20) !important;
+}
+
+
+.calendar-symbol {
+  font-size: 18px !important;
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-container {
+  position: relative !important;
+
+  z-index: 20 !important;
+
+  width: min(1180px, 90%) !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 !important;
+}
+
+
+.hero-content {
+  width: 610px !important;
+
+  max-width: 610px !important;
+
+  padding-top: 13px !important;
+}
+
+
+/* ---------- SMALL TOP TEXT ---------- */
+
+.hero-eyebrow {
+  margin:
+    0
+    0
+    11px !important;
+
+  color: #061d4b !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 10px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 3.7px !important;
+
+  white-space: nowrap !important;
+}
+
+
+.hero-eyebrow span {
+  margin:
+    0
+    8px !important;
+}
+
+
+/* ---------- SMALL GOLD LINE ---------- */
+
+.hero-small-line {
+  width: 66px !important;
+
+  height: 2px !important;
+
+  margin:
+    0
+    0
+    12px !important;
+
+  background: #ae7118 !important;
+}
+
+
+/* ---------- MAIN HEADLINE ---------- */
+
+.hero h1 {
+  width: 610px !important;
+
+  max-width: none !important;
+
+  margin:
+    0
+    0
+    12px !important;
+
+  padding: 0 !important;
+
+  color: #061d4b !important;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif !important;
+
+  font-size: 51px !important;
+
+  font-weight: 600 !important;
+
+  line-height: .98 !important;
+
+  letter-spacing: -2px !important;
+}
+
+
+.hero h1 span {
+  display: block !important;
+
+  width: 100% !important;
+
+  white-space: nowrap !important;
+}
+
+
+.hero h1 .gold-text {
+  margin-top: 4px !important;
+
+  color: #a86c18 !important;
+}
+
+
+/* ---------- SUBTITLE ---------- */
+
+.hero-subtitle {
+  margin:
+    0
+    0
+    17px !important;
+
+  color: #061d4b !important;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif !important;
+
+  font-size: 13px !important;
+
+  font-weight: 400 !important;
+
+  line-height: 1.55 !important;
+
+  letter-spacing: 3.2px !important;
+}
+
+
+/* ---------- HERO CONSULTATION BUTTON ---------- */
+
+.hero-button {
+  width: 285px !important;
+
+  min-width: 285px !important;
+
+  height: 49px !important;
+
+  padding:
+    0
+    25px !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 14px !important;
+
+  color: white !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #996014,
+      #c98f32,
+      #a66917
+    ) !important;
+
+  border-radius: 8px !important;
+
+  font-size: 12px !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: 1.5px !important;
+}
+
+
+/* =========================================================
+   GOLD + NAVY CURVED BOTTOM
+   ========================================================= */
+
+.hero-gold-ribbon {
+  position: absolute !important;
+
+  z-index: 5 !important;
+
+  left: -3% !important;
+
+  bottom: 3px !important;
+
+  width: 106% !important;
+
+  height: 31px !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #c68726,
+      #e0ae52,
+      #b97518
+    ) !important;
+
+  border-radius:
+    0 0 55% 35% !important;
+
+  transform:
+    rotate(1.1deg) !important;
+}
+
+
+.hero-navy-ribbon {
+  position: absolute !important;
+
+  z-index: 6 !important;
+
+  left: -3% !important;
+
+  bottom: -10px !important;
+
+  width: 106% !important;
+
+  height: 34px !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #041a3d,
+      #082b55
+    ) !important;
+
+  border-radius:
+    0 0 40% 60% !important;
+
+  transform:
+    rotate(-.9deg) !important;
+}
+
+
+/* =========================================================
+   DESKTOP POSITIONING
+   ========================================================= */
+
+@media (min-width: 1101px) {
+
+  .hero {
+    background-position:
+      center,
+      center 55% !important;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .header-container {
+    width: 94% !important;
+  }
+
+  .logo {
+    width: 125px !important;
+
+    flex-basis: 125px !important;
+  }
+
+  .logo img {
+    width: 120px !important;
+  }
+
+  .main-nav {
+    margin-left: 25px !important;
+
+    gap: 24px !important;
+  }
+
+  .top-consultation-btn {
+    min-width: 195px !important;
+
+    padding:
+      0
+      13px !important;
+
+    font-size: 10px !important;
+  }
+
+  .hero-container {
+    width: 90% !important;
+  }
+
+  .hero-content {
+    width: 540px !important;
+
+    max-width: 52% !important;
+  }
+
+  .hero h1 {
+    width: 540px !important;
+
+    font-size: 46px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero {
+    height: auto !important;
+
+    min-height: 780px !important;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.04) 0%,
+        rgba(255,255,255,.08) 29%,
+        rgba(255,255,255,.88) 48%,
+        rgba(255,255,255,1) 67%
+      ),
+      url("./toronto-skyline.jpg") !important;
+
+    background-size:
+      cover,
+      cover !important;
+
+    background-position:
+      center,
+      center top !important;
+  }
+
+
+  .header-container {
+    height: auto !important;
+
+    flex-wrap: wrap !important;
+
+    padding-bottom: 15px !important;
+  }
+
+
+  .main-nav {
+    order: 3 !important;
+
+    width: 100% !important;
+
+    margin:
+      7px
+      0
+      0 !important;
+
+    padding-top: 4px !important;
+
+    justify-content: center !important;
+  }
+
+
+  .hero-container {
+    padding:
+      325px
+      0
+      95px !important;
+  }
+
+
+  .hero-content {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    padding-top: 0 !important;
+  }
+
+
+  .hero h1 {
+    width: 100% !important;
+
+    font-size: 45px !important;
+  }
+
+
+  .hero h1 span {
+    white-space: normal !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .top-consultation-btn {
+    display: none !important;
+  }
+
+
+  .main-nav {
+    gap:
+      8px
+      17px !important;
+
+    flex-wrap: wrap !important;
+  }
+
+
+  .main-nav a {
+    font-size: 13px !important;
+  }
+
+
+  .hero {
+    min-height: 790px !important;
+  }
+
+
+  .hero-container {
+    padding-top: 340px !important;
+  }
+
+
+  .hero h1 {
+    font-size: 39px !important;
+
+    letter-spacing: -1px !important;
+  }
+
+
+  .hero-eyebrow {
+    font-size: 8px !important;
+
+    letter-spacing: 2px !important;
+
+    white-space: normal !important;
+  }
+
+
+  .hero-subtitle {
+    font-size: 10px !important;
+
+    letter-spacing: 2px !important;
+  }
+
+
+  .hero-button {
+    width: 100% !important;
+
+    min-width: 0 !important;
+  }
+
+}
