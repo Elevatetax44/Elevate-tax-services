@@ -1,67 +1,51 @@
-/* ==========================================================
+/* =========================================================
    ELEVATE TAX SERVICES
-   HOMEPAGE MASTER DESIGN
-   Navy • Gold • White
-   ========================================================== */
-
-
-/* ---------- BRAND COLOURS ---------- */
+   MASTER HOMEPAGE
+   ========================================================= */
 
 :root {
-  --navy: #061d4a;
-  --deep-navy: #031735;
-  --blue-navy: #083664;
+  --navy: #061d4b;
+  --navy-dark: #03162f;
+  --navy-light: #073663;
 
-  --gold: #b77a1f;
-  --gold-dark: #956116;
-  --gold-light: #d9ae59;
+  --gold: #ae7118;
+  --gold-mid: #c58a2d;
+  --gold-light: #d9aa51;
 
   --white: #ffffff;
-  --ivory: #fdfbf7;
-  --cream: #faf6ee;
+  --cream: #fbf7ef;
 
-  --text: #061d4a;
-  --soft-text: #53617a;
-
-  --line: #e7d2ab;
+  --text: #061d4b;
+  --line: #e4c38d;
 }
 
 
-/* ==========================================================
+/* =========================================================
    RESET
-   ========================================================== */
+   ========================================================= */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  background: var(--white);
-
+  margin: 0;
+  background: #ffffff;
   color: var(--text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
 img {
   display: block;
@@ -69,100 +53,72 @@ img {
 }
 
 
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
+/* =========================================================
+   SHARED BUTTONS
+   ========================================================= */
 
-.button {
-  min-height: 52px;
-
+.gold-button,
+.navy-button,
+.top-consultation-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  gap: 12px;
-
-  padding: 0 30px;
+  gap: 14px;
 
   border-radius: 8px;
 
-  text-transform: uppercase;
-
-  letter-spacing: 1.6px;
-
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 1.5px;
 
   transition:
-    transform .22s ease,
-    box-shadow .22s ease,
-    background .22s ease;
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-
-.button-gold {
-  color: var(--white);
-
-  background:
-    linear-gradient(
-      135deg,
-      #986016 0%,
-      #c58a2d 45%,
-      #a86b18 100%
-    );
-
-  box-shadow:
-    0 8px 20px
-    rgba(112, 70, 13, .23);
-}
-
-
-.button-gold:hover {
-  box-shadow:
-    0 12px 27px
-    rgba(112, 70, 13, .34);
-}
-
-
-.button-navy {
+.gold-button,
+.top-consultation-btn {
   color: white;
 
   background:
     linear-gradient(
       135deg,
-      #031b40,
-      #074071
+      #9b6114 0%,
+      #ca9135 50%,
+      #a66816 100%
     );
 
   box-shadow:
-    0 8px 20px
-    rgba(4, 29, 67, .18);
+    0 5px 15px
+    rgba(76, 45, 7, .18);
 }
 
+.navy-button {
+  color: white;
 
-.button-navy:hover {
   background:
     linear-gradient(
       135deg,
-      #052658,
-      #075187
+      #031d43,
+      #06406e
     );
 }
 
+.gold-button:hover,
+.navy-button:hover,
+.top-consultation-btn:hover {
+  transform: translateY(-2px);
+}
 
-/* ==========================================================
+
+/* =========================================================
    HERO
-   ========================================================== */
+   ========================================================= */
 
 .hero {
   position: relative;
 
-  min-height: 700px;
+  height: 520px;
 
   overflow: hidden;
 
@@ -170,85 +126,66 @@ img {
     linear-gradient(
       90deg,
       rgba(255,255,255,1) 0%,
-      rgba(255,255,255,.98) 22%,
-      rgba(255,255,255,.90) 32%,
-      rgba(255,255,255,.53) 45%,
-      rgba(255,255,255,.10) 62%,
-      rgba(255,255,255,0) 77%
+      rgba(255,255,255,.99) 15%,
+      rgba(255,255,255,.94) 25%,
+      rgba(255,255,255,.73) 34%,
+      rgba(255,255,255,.32) 44%,
+      rgba(255,255,255,.04) 56%,
+      rgba(255,255,255,0) 72%
     ),
     url("toronto-skyline.jpg");
 
   background-size: cover;
 
   background-position:
-    center right;
+    center 54%;
 }
 
 
-/* ==========================================================
+/* =========================================================
    HEADER
-   ========================================================== */
+   ========================================================= */
 
-.site-header {
+.header {
   position: relative;
-
   z-index: 20;
-
-  width: 100%;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.98) 0%,
-      rgba(255,255,255,.92) 38%,
-      rgba(255,255,255,.20) 72%,
-      rgba(255,255,255,.05) 100%
-    );
 }
 
+.header-container {
+  width: min(1180px, 88%);
 
-.header-inner {
-  width: min(1400px, 90%);
+  height: 120px;
 
-  min-height: 125px;
-
-  margin: 0 auto;
+  margin: auto;
 
   display: flex;
+  align-items: flex-start;
 
-  align-items: center;
-
-  gap: 42px;
+  padding-top: 12px;
 }
 
-
-.header-logo {
-  flex-shrink: 0;
-}
-
-
-.header-logo img {
+.logo {
   width: 155px;
+  flex: 0 0 155px;
+}
 
+.logo img {
+  width: 145px;
   height: auto;
 }
 
-
 .main-nav {
-  margin-left: auto;
+  margin-left: 78px;
+  padding-top: 30px;
 
   display: flex;
-
-  align-items: center;
-
-  gap: 42px;
+  gap: 44px;
 }
-
 
 .main-nav a {
   position: relative;
 
-  padding: 17px 0;
+  padding-bottom: 10px;
 
   color: var(--navy);
 
@@ -257,110 +194,96 @@ img {
     "Times New Roman",
     serif;
 
-  font-size: 16px;
+  font-size: 15px;
 }
-
 
 .main-nav a::after {
   content: "";
 
   position: absolute;
 
+  bottom: 0;
   left: 50%;
 
-  bottom: 7px;
-
   width: 0;
-
   height: 2px;
 
   background: var(--gold);
 
-  transform:
-    translateX(-50%);
+  transform: translateX(-50%);
 
-  transition:
-    width .22s ease;
+  transition: width .2s ease;
 }
-
 
 .main-nav a:hover::after,
 .main-nav a.active::after {
-  width: 52px;
+  width: 48px;
 }
 
+.top-consultation-btn {
+  margin-left: auto;
+  margin-top: 13px;
 
-.header-button {
-  flex-shrink: 0;
-
-  min-height: 55px;
-
-  padding: 0 25px;
-}
-
-
-.calendar-icon {
-  font-size: 17px;
-}
-
-
-/* ==========================================================
-   HERO COPY
-   ========================================================== */
-
-.hero-inner {
-  position: relative;
-
-  z-index: 10;
-
-  width: min(1400px, 87%);
-
-  margin: 0 auto;
+  height: 49px;
 
   padding:
-    45px
-    0
-    130px;
+    0 24px;
+
+  white-space: nowrap;
+}
+
+.calendar-symbol {
+  font-size: 20px;
 }
 
 
-.hero-copy {
-  width: 590px;
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
-  max-width: 48%;
+.hero-container {
+  position: relative;
+  z-index: 10;
+
+  width: min(1180px, 88%);
+
+  margin: auto;
 }
 
+.hero-content {
+  width: 530px;
+  max-width: 47%;
+
+  padding-top: 9px;
+}
 
 .hero-eyebrow {
   color: var(--navy);
 
-  font-size: 11px;
-
+  font-size: 10px;
   font-weight: 700;
 
   letter-spacing: 4px;
 
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
-
 
 .hero-eyebrow span {
-  padding: 0 8px;
+  margin: 0 8px;
 }
 
-
-.small-gold-line {
+.hero-small-line {
   width: 67px;
-
   height: 2px;
 
-  background: var(--gold);
+  margin-bottom: 12px;
 
-  margin-bottom: 17px;
+  background: var(--gold);
 }
 
-
 .hero h1 {
+  margin: 0 0 12px;
+
   color: var(--navy);
 
   font-family:
@@ -368,114 +291,115 @@ img {
     "Times New Roman",
     serif;
 
-  font-size:
-    clamp(
-      51px,
-      5.15vw,
-      77px
-    );
+  font-size: clamp(46px, 4.4vw, 63px);
 
-  line-height: .98;
+  line-height: .94;
 
   letter-spacing: -2px;
 
-  font-weight: 500;
-
-  margin-bottom: 22px;
+  font-weight: 600;
 }
 
-
-.hero-line,
-.hero-gold {
+.hero h1 span {
   display: block;
 }
 
+.hero h1 .gold-text {
+  margin-top: 5px;
 
-.hero-gold {
-  color: var(--gold);
-
-  margin-top: 6px;
+  color: #a76b17;
 }
 
-
 .hero-subtitle {
+  margin-bottom: 17px;
+
   color: var(--navy);
 
-  font-size: 15px;
+  font-size: 13px;
 
   line-height: 1.55;
 
-  letter-spacing: 4px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 28px;
+  letter-spacing: 3.3px;
 }
-
 
 .hero-button {
   min-width: 285px;
+  height: 51px;
+
+  padding:
+    0 26px;
+}
+
+.arrow {
+  font-size: 19px;
 }
 
 
-/* ==========================================================
-   HERO CURVED GOLD + NAVY DETAIL
-   ========================================================== */
+/* =========================================================
+   HERO CURVED RIBBONS
+   ========================================================= */
 
-.hero-wave {
+.hero-gold-ribbon {
   position: absolute;
 
-  left: -5%;
+  z-index: 4;
 
-  width: 110%;
+  left: -4%;
+  bottom: 6px;
+
+  width: 108%;
+  height: 34px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #c98a2a,
+      #e0ad50,
+      #bb7719
+    );
 
   border-radius:
-    0 0 50% 50%;
-}
-
-
-.hero-wave-gold {
-  bottom: 4px;
-
-  height: 48px;
-
-  background: var(--gold);
+    0 0 55% 35%;
 
   transform:
-    rotate(1.8deg);
-
-  transform-origin:
-    center;
+    rotate(1.3deg);
 }
 
+.hero-navy-ribbon {
+  position: absolute;
 
-.hero-wave-navy {
-  bottom: -15px;
+  z-index: 5;
 
-  height: 52px;
+  left: -4%;
+  bottom: -9px;
 
-  background: var(--navy);
+  width: 108%;
+  height: 37px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #041a3d,
+      #082b55
+    );
+
+  border-radius:
+    0 0 40% 60%;
 
   transform:
-    rotate(-1.1deg);
-
-  transform-origin:
-    center;
+    rotate(-1deg);
 }
 
 
-/* ==========================================================
-   COMMON SECTION TITLE
-   ========================================================== */
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
 
-.section-heading {
+.section-title {
   text-align: center;
-
-  margin-bottom: 38px;
 }
 
-
-.section-heading h2 {
+.section-title h2 {
   color: var(--navy);
 
   font-family:
@@ -483,26 +407,21 @@ img {
     "Times New Roman",
     serif;
 
-  font-size:
-    clamp(
-      36px,
-      3.7vw,
-      48px
-    );
+  font-size: 35px;
 
-  line-height: 1.05;
+  line-height: 1;
 
-  font-weight: 500;
+  font-weight: 600;
 }
 
+.section-title > span {
+  display: block;
 
-.heading-gold-line {
-  width: 76px;
-
+  width: 66px;
   height: 2px;
 
   margin:
-    13px
+    10px
     auto
     0;
 
@@ -510,29 +429,27 @@ img {
 }
 
 
-/* ==========================================================
+/* =========================================================
    SERVICES
-   ========================================================== */
+   ========================================================= */
 
 .services-section {
   padding:
-    45px
+    18px
     5%
-    55px;
+    27px;
 
   background:
-    linear-gradient(
-      180deg,
-      #ffffff,
-      #fefdfb
-    );
+    #fff;
 }
 
+.services-row {
+  width: min(1100px, 100%);
 
-.services-grid {
-  width: min(1320px, 100%);
-
-  margin: 0 auto;
+  margin:
+    18px
+    auto
+    0;
 
   display: grid;
 
@@ -540,92 +457,68 @@ img {
     repeat(5, 1fr);
 }
 
-
-.service-item {
+.service {
   position: relative;
 
-  min-height: 175px;
-
-  padding:
-    5px
-    25px
-    15px;
+  min-height: 130px;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
 
-  justify-content: flex-start;
-
   text-align: center;
-
-  transition:
-    transform .22s ease,
-    background .22s ease;
 }
 
-
-.service-item:not(:last-child)::after {
+.service:not(:last-child)::after {
   content: "";
 
   position: absolute;
 
+  top: 5px;
   right: 0;
 
-  top: 12px;
-
-  height: 116px;
-
   width: 1px;
-
-  background: var(--line);
-}
-
-
-.service-item:hover {
-  transform:
-    translateY(-5px);
+  height: 112px;
 
   background:
-    rgba(250,246,238,.55);
+    rgba(197,138,45,.45);
 }
 
-
 .service-icon {
-  width: 82px;
+  width: 73px;
+  height: 73px;
 
-  height: 82px;
+  margin-bottom: 5px;
 
-  margin-bottom: 12px;
-
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border:
     1px solid
-    #e4c28b;
+    rgba(197,138,45,.45);
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: var(--gold);
+  border-radius: 50%;
 
   background:
-    radial-gradient(
-      circle,
-      #fffefb,
-      #fbf5e9
-    );
-
-  font-size: 35px;
+    #fffdf9;
 }
 
+.service-icon svg {
+  width: 45px;
+  height: 45px;
 
-.service-item h3 {
+  fill: none;
+
+  stroke: #a86b12;
+
+  stroke-width: 2.6;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service h3 {
   color: var(--navy);
 
   font-family:
@@ -633,283 +526,107 @@ img {
     "Times New Roman",
     serif;
 
-  font-size: 21px;
+  font-size: 18px;
 
-  line-height: 1.08;
+  line-height: 1.05;
 
   font-weight: 600;
 }
 
-
-/* ==========================================================
-   THREE FEATURE PANELS
-   ========================================================== */
-
-.feature-section {
-  background: white;
+.service:hover {
+  transform: translateY(-2px);
 }
 
 
+/* =========================================================
+   FEATURE PANELS
+   ========================================================= */
+
+.feature-section {
+  border-top:
+    1px solid
+    #ece7de;
+
+  border-bottom:
+    1px solid
+    #ece7de;
+}
+
 .feature-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
     repeat(3, 1fr);
-
-  width: 100%;
 }
 
-
-.feature-card {
+.feature-panel {
   min-width: 0;
+
+  height: 310px;
+
+  display: grid;
+
+  grid-template-columns:
+    58% 42%;
 
   background:
     linear-gradient(
       180deg,
       #ffffff,
-      #fdfbf8
+      #fcfaf6
     );
 
   border-right:
     1px solid
-    #e7e2da;
+    #e9e3da;
 }
 
-
-.feature-card:last-child {
+.feature-panel:last-child {
   border-right: none;
 }
 
-
-.feature-image {
-  display: block;
-
-  height: 315px;
-
-  background-size: cover;
-
-  background-position: center;
-
-  transition:
-    filter .25s ease;
-}
-
-
-.feature-image:hover {
-  filter:
-    brightness(1.04);
-}
-
-
-.ebooks-image {
-  background-image:
-    url("ebooks-display.jpg");
-
-  background-position:
-    center;
-}
-
-
-.consultation-image {
-  background-image:
-    url("consultation-desk.jpg");
-
-  background-position:
-    center;
-}
-
-
-.portal-image {
-  background-image:
-    url("client-portal.jpg");
-
-  background-position:
-    center;
-}
-
-
-.feature-content {
-  min-height: 250px;
-
-  padding:
-    28px
-    45px
-    30px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-}
-
-
-.feature-content h2 {
-  color: var(--navy);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 26px;
-
-  line-height: 1.08;
-
-  text-transform: uppercase;
-
-  font-weight: 600;
-
-  margin-bottom: 12px;
-}
-
-
-.feature-content p {
-  max-width: 270px;
-
-  color: var(--navy);
-
-  font-size: 13px;
-
-  line-height: 1.45;
-
-  margin-bottom: 20px;
-}
-
-
-.feature-button {
-  width: 100%;
-
-  max-width: 290px;
-
-  margin-top: auto;
-}
-
-
-/* ==========================================================
-   WHY CHOOSE ELEVATE
-   ========================================================== */
-
-.why-section {
-  position: relative;
-
-  padding:
-    35px
-    5%
-    45px;
+.feature-photo {
+  height: 100%;
 
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      #fbf8f2,
-      #ffffff 24%,
-      #ffffff 76%,
-      #fbf8f2
-    );
 }
 
+.feature-photo img {
+  width: 100%;
+  height: 100%;
 
-.why-section::before,
-.why-section::after {
-  content: "◆";
-
-  position: absolute;
-
-  color:
-    rgba(
-      183,
-      122,
-      31,
-      .045
-    );
-
-  font-size: 180px;
-
-  top: 30px;
+  object-fit: cover;
 }
 
-
-.why-section::before {
-  left: -20px;
+.feature-panel:first-child .feature-photo img {
+  object-position: center center;
 }
 
-
-.why-section::after {
-  right: -20px;
+.feature-panel:nth-child(2) .feature-photo img {
+  object-position: 55% center;
 }
 
-
-.why-grid {
-  position: relative;
-
-  z-index: 2;
-
-  width: min(1200px, 100%);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
+.feature-panel:nth-child(3) .feature-photo img {
+  object-position: 55% center;
 }
 
-
-.why-item {
-  position: relative;
+.feature-copy {
+  min-width: 0;
 
   padding:
-    0
-    32px;
-
-  text-align: center;
-}
-
-
-.why-item:not(:last-child)::after {
-  content: "";
-
-  position: absolute;
-
-  right: 0;
-
-  top: 10px;
-
-  width: 1px;
-
-  height: 120px;
-
-  background: var(--line);
-}
-
-
-.why-icon {
-  height: 47px;
+    105px
+    16px
+    13px;
 
   display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: var(--gold);
-
-  font-size: 36px;
-
-  margin-bottom: 7px;
+  flex-direction: column;
 }
 
+.feature-copy h2 {
+  margin-bottom: 9px;
 
-.why-icon.maple {
-  color: #a66a16;
-}
-
-
-.why-item h3 {
   color: var(--navy);
 
   font-family:
@@ -919,71 +636,236 @@ img {
 
   font-size: 20px;
 
-  line-height: 1.08;
+  line-height: 1.05;
 
-  font-weight: 600;
-
-  margin-bottom: 10px;
+  font-weight: 700;
 }
 
+.feature-copy p {
+  color: var(--navy);
+
+  font-size: 12px;
+
+  line-height: 1.35;
+}
+
+.feature-copy .navy-button,
+.feature-copy .feature-button {
+  width: calc(100% + 150px);
+
+  max-width: 260px;
+
+  height: 43px;
+
+  margin-top: auto;
+
+  margin-left: -150px;
+
+  padding:
+    0 20px;
+}
+
+
+/* =========================================================
+   WHY CHOOSE ELEVATE
+   ========================================================= */
+
+.why-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    20px
+    5%
+    27px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fcf8f0,
+      #fff 20%,
+      #fff 80%,
+      #fcf8f0
+    );
+}
+
+.why-title {
+  margin-bottom: 20px;
+}
+
+.why-title h2 {
+  font-size: 34px;
+}
+
+.why-row {
+  position: relative;
+  z-index: 3;
+
+  width: min(1040px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+}
+
+.why-item {
+  position: relative;
+
+  min-height: 120px;
+
+  padding:
+    0 25px;
+
+  text-align: center;
+}
+
+.why-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  right: 0;
+
+  width: 1px;
+  height: 105px;
+
+  background:
+    rgba(197,138,45,.45);
+}
+
+.why-icon {
+  height: 45px;
+
+  margin-bottom: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-icon svg {
+  width: 42px;
+  height: 42px;
+
+  fill: none;
+
+  stroke: #ae7118;
+
+  stroke-width: 2.6;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.why-maple {
+  height: 45px;
+
+  margin-bottom: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 37px;
+
+  line-height: 1;
+}
+
+.why-item h3 {
+  margin-bottom: 7px;
+
+  color: var(--navy);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.05;
+}
 
 .why-item p {
   color: var(--navy);
 
-  font-size: 13px;
+  font-size: 12px;
 
-  line-height: 1.45;
+  line-height: 1.35;
+}
+
+.maple-decoration {
+  position: absolute;
+
+  top: 35px;
+
+  z-index: 1;
+
+  color:
+    rgba(177,113,24,.055);
+
+  font-size: 145px;
+
+  transform: rotate(25deg);
+}
+
+.maple-left {
+  left: -20px;
+}
+
+.maple-right {
+  right: -20px;
+
+  transform: rotate(-25deg);
 }
 
 
-/* ==========================================================
-   LARGE NAVY CTA
-   ========================================================== */
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
 
-.main-cta {
-  position: relative;
+.bottom-cta {
+  min-height: 125px;
 
-  padding:
-    38px
-    6%;
-
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 
   color: white;
 
   background:
     linear-gradient(
       90deg,
-      rgba(3,24,56,.99) 0%,
-      rgba(4,35,73,.98) 50%,
-      rgba(4,35,73,.76) 72%,
-      rgba(4,35,73,.60) 100%
+      rgba(3,22,52,.99) 0%,
+      rgba(4,34,70,.98) 48%,
+      rgba(4,34,70,.76) 67%,
+      rgba(4,34,70,.42) 100%
     ),
     url("toronto-skyline.jpg");
 
   background-size: cover;
 
   background-position:
-    center 63%;
+    center 65%;
 }
 
-
-.main-cta-inner {
-  width: min(1320px, 100%);
+.bottom-cta-container {
+  width: min(1180px, 88%);
 
   margin: auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-  gap: 60px;
+  gap: 45px;
 }
 
-
-.main-cta-copy h2 {
+.bottom-cta-copy h2 {
   color: white;
 
   font-family:
@@ -991,131 +873,118 @@ img {
     "Times New Roman",
     serif;
 
-  font-size:
-    clamp(
-      31px,
-      3vw,
-      42px
-    );
+  font-size: 28px;
 
-  font-weight: 500;
+  line-height: 1.05;
 
-  line-height: 1.08;
+  font-weight: 600;
 }
 
-
-.cta-gold-line {
-  width: 60px;
-
+.bottom-gold-line {
+  width: 58px;
   height: 2px;
 
   margin:
-    12px
+    9px
     0;
 
-  background:
-    var(--gold-light);
+  background: var(--gold-light);
 }
 
+.bottom-cta-copy p {
+  color: #f2f4f7;
 
-.main-cta-copy p {
-  color: #eef3f9;
+  font-size: 13px;
 
-  max-width: 580px;
-
-  font-size: 14px;
+  line-height: 1.4;
 }
 
-
-.main-cta-button {
-  min-width: 290px;
+.bottom-cta-button {
+  width: 285px;
+  height: 48px;
 
   flex-shrink: 0;
 }
 
 
-/* ==========================================================
+/* =========================================================
    FOOTER
-   ========================================================== */
+   ========================================================= */
 
 .footer {
-  background:
-    linear-gradient(
-      90deg,
-      #031633,
-      #04254c
-    );
+  padding:
+    10px
+    6%
+    13px;
 
   color: white;
 
-  padding:
-    30px
-    6%
-    20px;
+  background:
+    linear-gradient(
+      90deg,
+      #03152f,
+      #052750
+    );
 }
 
+.footer-main {
+  width: min(1160px, 100%);
 
-.footer-top {
-  width: min(1320px, 100%);
+  min-height: 73px;
 
   margin: auto;
 
   display: grid;
 
   grid-template-columns:
-    170px
-    1fr
-    1.4fr
-    1.3fr;
+    160px
+    180px
+    260px
+    1fr;
 
   align-items: center;
 
-  gap: 30px;
+  gap: 22px;
 }
 
-
-.footer-brand {
-  padding-right: 25px;
+.footer-logo {
+  padding-right: 22px;
 
   border-right:
     1px solid
-    rgba(255,255,255,.35);
+    rgba(255,255,255,.45);
 }
 
-
-.footer-brand img {
-  width: 135px;
+.footer-logo img {
+  width: 115px;
+  height: auto;
 
   background: white;
 
-  padding: 5px;
+  padding: 2px;
 }
-
 
 .footer-contact {
   display: flex;
-
   align-items: center;
 
-  gap: 12px;
+  gap: 9px;
 
   color: white;
 
-  font-size: 14px;
+  font-size: 13px;
+
+  white-space: nowrap;
 }
 
+.footer-icon {
+  width: 31px;
+  height: 31px;
 
-.contact-icon {
-  width: 35px;
-
-  height: 35px;
-
-  flex-shrink: 0;
+  flex: 0 0 31px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   border:
@@ -1126,372 +995,412 @@ img {
 
   color: var(--gold-light);
 
-  font-size: 16px;
+  font-size: 14px;
 }
-
 
 .footer-contact a:hover {
   color: var(--gold-light);
 }
 
-
-.footer-divider {
-  width: min(930px, 78%);
+.footer-line {
+  width: min(760px, 72%);
 
   height: 1px;
 
   margin:
-    22px
+    0
     auto
-    15px;
+    10px;
 
   background:
-    rgba(
-      215,
-      174,
-      89,
-      .65
-    );
+    rgba(211,164,73,.72);
 }
 
-
 .footer-bottom {
-  width: min(1100px, 100%);
-
-  margin: auto;
-
   text-align: center;
 }
 
-
 .footer-nav {
   display: flex;
-
-  justify-content: center;
-
   align-items: center;
+  justify-content: center;
 
   flex-wrap: wrap;
 
-  gap: 15px;
-
-  margin-bottom: 13px;
+  gap: 13px;
 }
-
 
 .footer-nav a {
-  color: #dce5f0;
+  color: #e2e8ef;
 
-  font-size: 12px;
+  font-size: 11px;
 }
-
 
 .footer-nav a:hover {
   color: var(--gold-light);
 }
 
-
 .footer-nav span {
   color: var(--gold-light);
 }
 
-
 .copyright {
-  color: #8ea0b8;
+  margin-top: 8px;
 
-  font-size: 10px;
+  color: #8395ad;
 
-  letter-spacing: .5px;
+  font-size: 9px;
 }
 
 
-/* ==========================================================
-   TABLET
-   ========================================================== */
+/* =========================================================
+   LARGE TABLETS
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
-  .header-inner {
-    flex-wrap: wrap;
-
-    gap: 18px;
-
-    padding:
-      15px
-      0
-      18px;
+  .header-container {
+    width: 94%;
   }
 
+  .main-nav {
+    margin-left: 30px;
+    gap: 25px;
+  }
+
+  .top-consultation-btn {
+    padding:
+      0 15px;
+
+    font-size: 11px;
+  }
+
+  .hero-container {
+    width: 90%;
+  }
+
+  .feature-panel {
+    grid-template-columns:
+      55% 45%;
+  }
+
+  .feature-copy {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .feature-copy .navy-button,
+  .feature-copy .feature-button {
+    width: calc(100% + 100px);
+
+    margin-left: -100px;
+  }
+
+  .footer-main {
+    grid-template-columns:
+      130px
+      170px
+      240px
+      1fr;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero {
+    height: auto;
+
+    min-height: 750px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.05) 0%,
+        rgba(255,255,255,.18) 31%,
+        rgba(255,255,255,.90) 50%,
+        rgba(255,255,255,1) 68%
+      ),
+      url("toronto-skyline.jpg");
+
+    background-size: cover;
+
+    background-position: center top;
+  }
+
+  .header-container {
+    height: auto;
+
+    padding:
+      10px
+      0
+      20px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+  }
+
+  .logo {
+    width: 130px;
+    flex-basis: 130px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .top-consultation-btn {
+    margin-left: auto;
+  }
 
   .main-nav {
     order: 3;
 
     width: 100%;
 
-    margin-left: 0;
+    margin:
+      5px
+      0
+      0;
+
+    padding-top: 5px;
 
     justify-content: center;
 
     gap: 25px;
   }
 
-
-  .hero {
-    min-height: 720px;
-
-    background-position:
-      60% center;
+  .hero-container {
+    padding-top: 310px;
+    padding-bottom: 90px;
   }
 
-
-  .hero-copy {
-    max-width: 57%;
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
   }
 
-
-  .services-grid {
-    grid-template-columns:
-      repeat(5, 1fr);
+  .hero h1 {
+    font-size: 48px;
   }
 
-
-  .service-item {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-
-  .feature-image {
-    height: 270px;
-  }
-
-
-  .feature-content {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-
-  .footer-top {
+  .services-row {
     grid-template-columns:
       repeat(2, 1fr);
   }
 
+  .service {
+    padding: 20px;
 
-  .footer-brand {
+    border-bottom:
+      1px solid
+      rgba(197,138,45,.30);
+  }
+
+  .service:not(:last-child)::after {
+    display: none;
+  }
+
+  .service:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-panel {
+    height: 320px;
+
+    grid-template-columns:
+      55% 45%;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      #e9e3da;
+  }
+
+  .feature-copy {
+    padding-top: 95px;
+  }
+
+  .why-row {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .why-item {
+    padding:
+      20px
+      15px;
+  }
+
+  .why-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .bottom-cta-container {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding:
+      28px
+      0;
+  }
+
+  .footer-main {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 20px;
+
+    padding:
+      20px
+      0;
+  }
+
+  .footer-logo {
     border-right: none;
   }
 
 }
 
 
-/* ==========================================================
-   MOBILE
-   ========================================================== */
+/* =========================================================
+   PHONE
+   ========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 600px) {
 
-
-  .header-inner {
-    width: 90%;
-
-    justify-content: center;
-  }
-
-
-  .header-logo img {
-    width: 130px;
-  }
-
-
-  .header-button {
+  .top-consultation-btn {
     display: none;
   }
-
 
   .main-nav {
     gap:
       8px
       17px;
-  }
 
+    flex-wrap: wrap;
+  }
 
   .main-nav a {
-    font-size: 14px;
+    font-size: 13px;
   }
-
 
   .hero {
-    min-height: 850px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(255,255,255,.03) 0%,
-        rgba(255,255,255,.05) 25%,
-        rgba(255,255,255,.78) 44%,
-        rgba(255,255,255,.98) 58%,
-        #ffffff 78%
-      ),
-      url("toronto-skyline.jpg");
-
-    background-size: cover;
-
-    background-position:
-      center top;
+    min-height: 790px;
   }
 
-
-  .hero-inner {
-    width: 88%;
-
-    margin-top: auto;
-
-    padding:
-      350px
-      0
-      115px;
+  .hero-container {
+    padding-top: 330px;
   }
-
-
-  .hero-copy {
-    width: 100%;
-
-    max-width: 100%;
-  }
-
 
   .hero-eyebrow {
-    font-size: 9px;
+    font-size: 8px;
 
     letter-spacing: 2px;
   }
 
-
   .hero h1 {
-    font-size: 44px;
+    font-size: 40px;
 
     letter-spacing: -1px;
   }
 
-
   .hero-subtitle {
-    font-size: 11px;
+    font-size: 10px;
 
-    letter-spacing: 2.4px;
+    letter-spacing: 2px;
   }
 
-
-  .services-section {
-    padding:
-      55px
-      6%;
+  .hero-button {
+    width: 100%;
+    min-width: 0;
   }
 
+  .section-title h2,
+  .why-title h2 {
+    font-size: 30px;
+  }
 
-  .services-grid {
+  .services-row {
     grid-template-columns: 1fr;
   }
 
+  .service:last-child {
+    grid-column: auto;
+  }
 
-  .service-item {
-    min-height: auto;
+  .feature-panel {
+    height: auto;
+
+    grid-template-columns: 1fr;
+  }
+
+  .feature-photo {
+    height: 250px;
+  }
+
+  .feature-copy {
+    min-height: 190px;
 
     padding:
       25px
-      15px;
-
-    border-bottom:
-      1px solid
-      var(--line);
+      25px;
   }
 
+  .feature-copy .navy-button,
+  .feature-copy .feature-button {
+    width: 100%;
+    max-width: none;
 
-  .service-item:not(:last-child)::after {
-    display: none;
+    margin:
+      20px
+      0
+      0;
   }
 
-
-  .feature-grid {
+  .why-row {
     grid-template-columns: 1fr;
   }
-
-
-  .feature-card {
-    border-right: none;
-
-    border-bottom:
-      1px solid
-      #e7e2da;
-  }
-
-
-  .feature-image {
-    height: 300px;
-  }
-
-
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
 
   .why-item {
-    padding:
-      25px
-      20px;
-
     border-bottom:
       1px solid
-      var(--line);
+      rgba(197,138,45,.25);
   }
 
+  .bottom-cta-copy h2 {
+    font-size: 25px;
+  }
 
-  .why-item:not(:last-child)::after {
+  .bottom-cta-copy p br {
     display: none;
   }
 
-
-  .main-cta {
-    padding:
-      55px
-      7%;
-  }
-
-
-  .main-cta-inner {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 30px;
-  }
-
-
-  .main-cta-button {
-    min-width: 0;
-
+  .bottom-cta-button {
     width: 100%;
   }
 
-
-  .footer-top {
+  .footer-main {
     grid-template-columns: 1fr;
-
-    gap: 22px;
   }
 
-
-  .footer-brand {
-    padding-right: 0;
+  .footer-contact {
+    white-space: normal;
   }
 
-
-  .footer-divider {
+  .footer-line {
     width: 100%;
   }
 
